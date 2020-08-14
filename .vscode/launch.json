@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            //"args": ["-m","./models/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+            //"args": ["-m","./models/quant_coco-tiny-v3-relu_edgetpu.tflite",    
+            "args": ["-m","./models/quant_coco-tiny-v3-relu.tflite",
+                     "-a","./cfg/tiny_yolo_anchors.txt",
+                     "-l","./cfg/coco.names",
+                      "-v", "../../Videos/VID_20200811_163721_1080p_30Hz_Bridge_ZoomX2_Inbound.mp4"
+                     ,"-t"
+                    ]
+        } 
+    ]
+}
